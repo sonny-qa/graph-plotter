@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--  // <script type="text/javascript" src="./jquery-1.12.0.min.js"></script> -->
+    <!-- change this to local for use at Maersk -->
+    <script   src="https://code.jquery.com/jquery-2.2.2.js"   integrity="sha256-4/zUCqiq0kqxhZIyp4G0Gk+AOtCJsY1TA00k5ClsZYE="   crossorigin="anonymous"></script>
+
+     <!-- <script src="./jquery-ui/jquery-ui.js"></script> -->
+    <script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"   integrity="sha256-DI6NdAhhFRnO2k51mumYeDShet3I8AKCQf/tf7ARNhI="   crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.css">
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script type="text/javascript" src="./graphing.js"></script>
+    <style>
+    .specialborder {
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+    }
+    
+    .specialheader {
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+
+    }
+    
+    table td, table th {
+        border: 1px solid black;
+
+    }
+    
+    table {
+        border-collapse: collapse;
+        font-family: Arial;
+        font-size: 10pt;
+
+    }
+
+
+    </style>
+    <!-- // <script src="http://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <!-- <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <table id="deliverytable" class="table" border="1px single black">
+        <div id="container" style="width:100%; height:50%;"></div>
+        <button id="gen-graph">generate graph</button>
+
+        <thead>
+            <tr>
+                <th class="specialheader"></th>
+                <th colspan="2" bgcolor="#a6d0e7">Original delivery forecast</th>
+                <th colspan="2" bgcolor="#efc5cc">Current delivery forecast</th>
+            </tr>
+            <tr>
+                <th>Equipment Description</th>
+                <th>First item </th>
+                <th>Last item </th>
+                <th>First item </th>
+                <th>Last item </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width: 400px">
+                    <input id="desc" class="" name="desc[]" style="width: 400px" type="text" />
+                </td>
+                <td>
+                    <input id="orig-1st-del" class="datepick" name="orig-1st-del[]" type="text" />
+                </td>
+                <td>
+                    <input id="orig-last-del" class="datepick" name="orig-last-del[]" type="text" />
+                </td>
+                <td>
+                    <input id="curr-1st-del" class="datepick" name="curr-1st-del[]" type="text" />
+                </td>
+                <td>
+                    <input id="curr-last-del" class="datepick" name="curr-last-del[]" type="text" />
+                </td>
+                <td class="specialborder"><a id="addnew" href=""><span class="ui-icon ui-icon-circle-plus"></span></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
